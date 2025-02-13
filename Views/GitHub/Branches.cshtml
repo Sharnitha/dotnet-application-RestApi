@@ -1,0 +1,33 @@
+@model Testing.Models.BranchViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Branch</title>
+</head>
+<body>
+    <h1>Select Branch to Run Pipeline</h1>
+
+    <form asp-action="RunPipeline" method="post">
+        <div>
+            <label for="branchSelect">Select Branch</label>
+            <select name="selectedBranch" id="branchSelect">
+                <option value="">-- Select a Branch --</option>
+                @foreach (var branch in Model.Branches)
+                {
+                    <option value="@branch">@branch</option>
+                }
+            </select>
+        </div>
+        <button type="submit">Run Pipeline</button>
+    </form>
+
+    @if (ViewBag.SelectedBranch != null)
+    {
+        <p>You selected branch: @ViewBag.SelectedBranch</p>
+    }
+</body>
+</html>
+

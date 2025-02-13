@@ -1,0 +1,7 @@
+/home/Sharnitha/application/test/application
+/home/Sharnitha/application/test/appsettings.Development.json
+/home/Sharnitha/application/test/appsettings.json
+/home/Sharnitha/application/test/application.dll
+/home/Sharnitha/application/test/application.deps.json
+/home/Sharnitha/application/test/application.runtimeconfig.json
+/home/Sharnitha/application/test/application.pdb
