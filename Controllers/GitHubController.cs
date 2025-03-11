@@ -22,7 +22,7 @@ namespace Testing.Controllers
         public async Task<IActionResult> GetBranches()
         {
             var repoOwner = "Sharnitha";  // Replace with your GitHub repo owner
-            var repoName = "Sharnitha-Git";  // Replace with your GitHub repo name
+            var repoName = "newrepo-dotnet";  // Replace with your GitHub repo name
             var url = $"https://api.github.com/repos/{repoOwner}/{repoName}/branches";
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
@@ -59,8 +59,8 @@ namespace Testing.Controllers
             }
 
             var repoOwner = "Sharnitha";  // Replace with your GitHub repo owner
-            var repoName = "Sharnitha-Git";  // Replace with your GitHub repo name
-            var workflowId = "automatic-ci.yaml";  // Replace with your workflow file name or ID
+            var repoName = "newrepo-dotnet";  // Replace with your GitHub repo name
+            var workflowId = "self-ci.yml";  // Replace with your workflow file name or ID
             var url = $"https://api.github.com/repos/{repoOwner}/{repoName}/actions/workflows/{workflowId}/dispatches";
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, url);
